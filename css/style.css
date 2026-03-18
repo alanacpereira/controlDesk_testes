@@ -1,0 +1,214 @@
+ /* Zerando estilos do naveador */
+* {
+    margin: 0px;
+    padding: 0px;
+    /* tamanho da caixa */
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body {
+    background: #e6eef5;
+}
+
+/* Menu e conteúdo lado a lado */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Menu lateral */
+.sidebar {
+    width: 260px;
+    background: #5e86a5;
+    color: white;
+    padding: 30px 20px;
+    transition: 0.3s;
+}
+
+.sidebar.close {
+    width: 70px;
+    padding: 30px 10px;
+    text-align: center;
+}
+
+.sidebar.close .texto {
+    display: none;
+}
+
+/* Perfis do usuário */
+.perfil {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.perfil img {
+    width: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+#menu-btn{
+    font-size:22px;
+    border:none;
+    background:none;
+    cursor:pointer;
+    margin-bottom:10px;
+}
+
+/* Menu */
+.menu a {
+    display: block;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.menu a:hover {
+    background: #3e6788;
+}
+
+/* Conteúdo do Dashboard - organiza título dashboard analítico*/
+.conteudo {
+    flex: 1;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Gráfico */
+/* fundo do gráfico */
+.grafico {
+    background: #6f95b1;
+    padding: 20px;
+    border-radius: 20px;
+    color: white;
+    margin: 30px auto;
+    max-width: 900px;
+}
+
+.grafico-topo{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:10px;
+}
+
+/* Topo da tela */
+.topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px auto;
+}
+
+.center {
+    text-align: center;
+}
+
+.left, .right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.topo h1 {
+    font-size: 30px;
+}
+
+.subtitulo {
+    color: #6b7a88;
+    font-size: 13px;
+}
+
+
+/* Bandeira e logo no topo da tela - topo direito*/
+.topo .right{
+display:flex;
+align-items:center;
+gap:15px; /*espaço entre itens*/
+}
+
+.logo{
+width:80px;
+}
+
+.flag{
+width:30px;
+border-radius:3px;
+}
+
+/* botão mês atual */
+.filtro button{
+    background:#5a7d95;
+    border:none;
+    padding:6px 12px;
+    border-radius:10px;
+    color:white;
+    cursor:pointer;
+}
+
+/* gráfico - Calendário */
+/* Organização em linhas e colunas */
+.calendario {
+    display: grid;
+    /* Quantas colunas o calendário terá: */
+    grid-template-columns: repeat(7, 1fr);
+    /* 7, 1fr significa que: são sete colunas todas do mesmo tamanho */
+    /* Espaço entre os números (quadrados): */
+    gap: 12px;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.calendario div {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 12px;
+    text-align: center;
+    border-radius: 10px;
+    font-size:14px;
+    transition: 0.2s;
+}
+
+.calendario div:hover {
+    background: rgba(255,255,255,0.4);
+    cursor: pointer;
+}
+
+/* dia atual */
+.hoje {
+    background: #FFD100 !important;
+    color: black;
+    font-weight: bold;
+}
+
+/* dias com atividade */
+.ativo {
+    border: 2px solid #00ff88;
+}
+
+/* Cards/Caixas */
+.cards {
+    display: flex;
+    gap: 20px;
+    /* margin-top: 25px; */
+}
+
+.card {
+    flex: 1;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card h3{
+    color:#666;
+    font-size:16px;
+}
+
+.card p {
+    font-size: 24px;
+    margin-top: 10px;
+}
