@@ -13,7 +13,7 @@
 <body>
     <!-- Estrutura -->
     <div class="container">
-        <!-- Sidebar -->
+        <!-- Sidebar - barra do lado -->
         <!-- Menu lateral -->
         <aside class="sidebar" id="sidebar">
             <div class="perfil">
@@ -38,90 +38,100 @@
         <!-- Conteúdo principal -->
         <main class="conteudo">
             <!-- Título Dashboard -->
-            <header class="topo">
-                <button id="menu-btn">☰</button>
-                <h1>Dashboard Analítico</h1>
-                <p class="subtitulo">Monitor de atividades e evolução de performance</p>
-            </header>
-    </div>
+            <div class="main">
+                <header class="topo">
+                    <div class="left">
+                        <button id="menu-btn">☰</button>
+                    </div>
 
-    <!-- Gráfico - grid igual ao figma -->
-    <section class="grafico">
-        <div class="graficoint">
-            <div class="grafico-topo">
+                    <div class="center">
+                    <h1>Dashboard Analítico</h1>
+                    <p class="subtitulo">Monitor de atividades e evolução de performance</p>
+                    </div>
 
-                <h2>Uso diário</h2>
+                    <div class="right">
+                        <img src="img/logo.png" class="logo">
+                        <img src="img/brasil.png" class="flag">
+                    </div>
+                </header>
+            </div>
 
-                <div class="filtro">
-                    <span>Último mês</span>
-                    <button>Mês atual</button>
+            <!-- Gráfico - grid igual ao figma -->
+            <section class="grafico">
+
+                <div class="grafico-topo">
+
+                    <h2>Uso diário</h2>
+
+                    <div class="filtro">
+                        <span>Último mês</span>
+                        <button>Mês atual</button>
+                    </div>
+
                 </div>
 
-            </div>
+                <div class="calendario" id="calendario">
 
-            <div class="calendario">
+                    <div>01</div>
+                    <div>02</div>
+                    <div>03</div>
+                    <div>04</div>
+                    <div>05</div>
+                    <div>06</div>
+                    <div>07</div>
 
-                <div>01</div>
-                <div>02</div>
-                <div>03</div>
-                <div>04</div>
-                <div>05</div>
-                <div>06</div>
-                <div>07</div>
+                    <div>08</div>
+                    <div>09</div>
+                    <div>10</div>
+                    <div>11</div>
+                    <div>12</div>
+                    <div>13</div>
+                    <div>14</div>
 
-                <div>08</div>
-                <div>09</div>
-                <div>10</div>
-                <div>11</div>
-                <div>12</div>
-                <div>13</div>
-                <div>14</div>
+                    <div>15</div>
+                    <div>16</div>
+                    <div>17</div>
+                    <div>18</div>
+                    <div>19</div>
+                    <div>20</div>
+                    <div>21</div>
 
-                <div>15</div>
-                <div>16</div>
-                <div>17</div>
-                <div>18</div>
-                <div>19</div>
-                <div>20</div>
-                <div>21</div>
+                    <div>22</div>
+                    <div>23</div>
+                    <div>24</div>
 
-                <div>22</div>
-                <div>23</div>
-                <div>24</div>
+                </div>
+            </section>
 
-            </div>
-        </div>
-    </section>
+            <!-- Cards - Caixas de tempo médio, tempo de sessão e sessões -->
+            <section class="cards">
 
-    <!-- Cards - Caixas de tempo médio, tempo de sessão e sessões -->
-    <section class="cards">
+                <div class="card">
 
-        <div class="card">
+                    <h3>Sessões</h3>
+                    <p id="sessao">0</p>
 
-            <h3>Sessões</h3>
-            <p>0</p>
+                </div>
 
-        </div>
+                <div class="card">
 
-        <div class="card">
+                    <h3>Tempo médio</h3>
 
-            <h3>Tempo médio</h3>
+                    <p id="tempoMedio">00:00</p>
 
-            <p id="tempoMedio">00:00</p>
+                </div>
 
-        </div>
+                <div class="card">
 
-        <div class="card">
+                    <h3>Tempo em sessão</h3>
 
-            <h3>Tempo em sessão</h3>
+                    <p id="tempoSessao">00:00</p>
 
-            <p id="tempoSessao">00:00</p>
+                </div>
 
-        </div>
+            </section>
 
-    </section>
-
-    </main>
+        </main>
 
     </div>
 

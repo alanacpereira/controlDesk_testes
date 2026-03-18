@@ -41,20 +41,6 @@ body {
     margin-bottom: 10px;
 }
 
-/* Topo da tela */
-.topo {
-    margin-bottom: 20px;
-}
-
-.topo h1 {
-    font-size: 30px;
-}
-
-.subtitulo {
-    color: #6b7a88;
-    font-size: 13px;
-}
-
 #menu-btn{
     font-size:22px;
     border:none;
@@ -101,6 +87,40 @@ body {
     margin-bottom:10px;
 }
 
+/* Topo da tela */
+.topo {
+    margin-bottom: 20px;
+}
+
+.topo h1 {
+    font-size: 30px;
+}
+
+.subtitulo {
+    color: #6b7a88;
+    font-size: 13px;
+}
+
+/* Bandeira e logo no topo da tela - topo direito*/
+.center {
+    text-align: center;
+}
+
+.left, .right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo{
+width:80px;
+}
+
+.brasil{
+width:30px;
+border-radius:3px;
+}
+
 /* botão mês atual */
 .filtro button{
     background:#5a7d95;
@@ -112,6 +132,7 @@ body {
 }
 
 /* gráfico - Calendário */
+/* Organização em linhas e colunas */
 .calendario {
     display: grid;
     /* Quantas colunas o calendário terá: */
