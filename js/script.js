@@ -1,67 +1,49 @@
-// Simular dados do sistema
-
-// guarda os valores determinados as variáveis
-
-const historico = [
-    { dia: 18, duracao: 120 }, // minutos
-    { dia: 18, duracao: 60 },
-    { dia: 17, duracao: 30 },
-    { dia: 16, duracao: 90 }
-];
-
-// procurando elementos pelo id - ATUALIZAR DADOS
-document.getElementById("sessao").innerText = sessoes
-document.getElementById("tempoMedio").innerText = tempoMedio
-document.getElementById("tempoSessao").innerText = tempoSessao
-
-const sessoes = historico.length;
+// MENU
+// pega botõa menu
 const btn = document.getElementById("menu-btn")
+// pega sidebar
 const sidebar = document.getElementById("sidebar")
 
-btn.addEventListener("click", function(){
-
-// adiciona na classe - sidebar aberta diferente da sidebar fechada
-sidebar.classList.toggle("close")
-
+// quando clicar no botão
+btn.addEventListener("click", ()=>{
+    // adiciona ou remove a classe "close"
+    sidebar.classList.toggle("close")
 })
 
-// MENU LATERAL
 
-const btn = document.getElementById("menu-btn");
-const sidebar = document.getElementById("sidebar");
+// CALENDÁRIO DINÂMICO
+const calendario = document.getElementById("calendario")
 
-btn.addEventListener("click", function () {
-    sidebar.classList.toggle("close");
-});
+// pega data atual
+const hoje = new Date()
 
+const ano = hoje.getFullYear()
+const mes = hoje.getMonth()
 
-// CALENDÁRIO DINAMICO 
-const calendario = document.getElementById("calendario");
+// pega quantos dias tem o mês
+const ultimoDia = new Date(ano, mes + 1, 0).getDate()
 
-// data atual
-const hoje = new Date();
-const diaAtual = hoje.getDate();
+// dia atual
+const diaHoje = hoje.getDate()
 
-// último dia do mês
-const ultimoDia = new Date(hoje.getFullYear(), hoje.getMonth() + 1, 0).getDate();
+// EXEMPLO (depois vem do banco)
+const diasComAtividade = [2, 5, 10, 18, 22]
+console.log(diasComAtividade)
 
-for (let i = 1; i <= ultimoDia; i++) {
-    const dia = document.createElement("div");
-    dia.innerText = i.toString().padStart(2, "0");
+// cria os dias
+for(let dia = 1; dia <= ultimoDia; dia++){
 
-    // dia atual
-    if (i === diaAtual) {
-        dia.classList.add("hoje");
+    let div = document.createElement("div")
+    div.innerText = dia
+
+    if(dia === diaHoje){
+        div.classList.add("hoje")
     }
 
-    // dias com uso
-    if (diasComAtividade.includes(i)) {
-        dia.classList.add("ativo");
+    // se teve atividades
+    if(diasComAtividade.includes(dia)){
+        div.classList.add("ativo")
     }
 
-    calendario.appendChild(dia);
-
-    dia.addEventListener("click", () => {
-    alert("Dia " + i + " clicado");
-});
+    calendario.appendChild(div)
 }
