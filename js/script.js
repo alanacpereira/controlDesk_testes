@@ -1,15 +1,20 @@
 // Simular dados do sistema
 
 // guarda os valores determinados as variáveis
-let sessoes = 12
-let tempoMedio = "00:15:20"
-let tempoSessao = "02:10:00"
+
+const historico = [
+    { dia: 18, duracao: 120 }, // minutos
+    { dia: 18, duracao: 60 },
+    { dia: 17, duracao: 30 },
+    { dia: 16, duracao: 90 }
+];
 
 // procurando elementos pelo id - ATUALIZAR DADOS
 document.getElementById("sessao").innerText = sessoes
 document.getElementById("tempoMedio").innerText = tempoMedio
 document.getElementById("tempoSessao").innerText = tempoSessao
 
+const sessoes = historico.length;
 const btn = document.getElementById("menu-btn")
 const sidebar = document.getElementById("sidebar")
 
