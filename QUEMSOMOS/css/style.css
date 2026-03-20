@@ -1,0 +1,220 @@
+/* ===========================
+REMOVENDO AS MARGENS PATRÕES
+============================== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ROLAGEM SUAVE */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ===========================
+MENU SUPERIOR
+============================== */
+.menu {
+    display: flex;
+    /* coloca itens lado a lado */
+    justify-content: space-between;
+    /* espaço entre eles */
+    align-items: center;
+    padding: 15px 58px;
+    background: #648eb7;
+}
+
+/* LOGO */
+.logo {
+    display: flex;
+    /* coloca imagem e texto lado a lado */
+    align-items: center;
+    /* centraliza verticalmente */
+    font-size: 18px;
+    /* aumenta texto */
+    font-weight: bold;
+    color: white;
+}
+
+/* IMAGEM DA LOGO */
+.logo img {
+    width: 65px;
+    /* aumenta a imagem */
+    height: auto;
+    /* mantém proporção */
+    margin-right: 1px;
+    /* espaço entre logo e texto */
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.menu ul li {
+    margin: 0 18px;
+}
+
+/* Botão quem somos? */
+.menu ul li a.ativo {
+    background-color: #062e62;
+    padding: 8px 18px;
+    border-radius: 15px;
+}
+
+.menu ul li a:hover {
+    background-color: #022149;
+    padding: 8px 18px;
+    border-radius: 15px;
+    transform: scale(1.1);
+    /* faz crescer */
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+/* BOTÃO MENU */
+.btn-menu {
+    display: flex;
+    align-items: center;
+}
+
+.login {
+    color: white;
+    margin-right: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    background: #226a9e;
+    border-radius: 15px;
+    padding: 8px 15px;
+    transition: 0.3s;
+}
+
+.login:hover {
+    background: #00577d;
+    transform: scale(1.05);
+}
+
+.btn-comecar {
+    background: #022149;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-comecar:hover {
+    background: #0a2c57;
+    transform: scale(1.05);
+}
+
+/* =========================
+SEÇÃO HERO (IMAGEM GRANDE)
+========================= */
+.hero {
+    height: 88vh;
+    /* altura da tela */
+    background-image: url("../img/img\ fundo.avif");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+}
+
+/* TEXTO DA HERO */
+.hero-texto {
+    color: white;
+    max-width: 500px;
+    font-weight: bold;
+}
+
+/* TÍTULO */
+.hero-texto h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* PARÁGRAFO */
+.hero-texto p {
+    margin-bottom: 25px;
+    line-height: 1.5;
+    font-weight: bold;
+}
+
+/* BOTÃO ABRIR CHAMADO*/
+.btn-abrir {
+    background: #031b38;
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.btn-abrir:hover {
+    background: #0a2c57;
+    transform: scale(1.05);
+}
+
+.quem-somos {
+    background: #6aa7c6;
+    padding: 60px 80px;
+}
+
+.container-quem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.texto-quem {
+    color: white;
+    max-width: 400px;
+}
+
+.texto-quem h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.texto-quem p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.img-quem img {
+    width: 450px;
+    border-radius: 10px;
+}
+
+.contatos {
+    background: #5f94b4;
+    text-align: center;
+    padding: 30px;
+    color: white;
+}
+
+.box-contato {
+    background: #4b6cb7;
+    margin: 20px auto;
+    padding: 12px;
+    border-radius: 20px;
+    width: 60%;
+
+    display: flex;
+    justify-content: space-around;
+}
